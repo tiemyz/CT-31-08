@@ -51,4 +51,26 @@ def desvio_padrao(lista_numeros):
 print(desvio_padrao(numeros))
 print(numeros) 
 
+#8 - Escreva uma função para encontrar elementos  em comum em uma lista de listas. Por exemplo, nessa lista contendo 3 listas cada uma tem os elementos 12 e 18. 
+#Original: [[12,18,23,25,45], [7,12,18,24,28], [1,5,8,12,15,16,18]] 
+#Elementos em comum: [18,12]
+
+lista = [[12,18,23,25,45], [7,12,18,24,28], [1,5,8,12,15,16,18]]
+print(len(lista))
+print(lista[0])
+print(12 in lista[1] and 12 in lista[2])
+
+def acha_comum(lista):
+    lista_comum = []
+    for elem in lista[0]:
+        for i in range(1,len(lista)-1):
+            if elem not in lista[i]:
+                break
+            if i == len(lista)-2:
+                lista_comum.append(elem)
+    return lista_comum
+print(acha_comum(lista))
+
+def subtrai(lista):
+    
 
